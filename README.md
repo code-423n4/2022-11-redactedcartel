@@ -178,10 +178,6 @@ true
 
 Yes, Avalanche
 
-### When are you thinking of running a contest?
-
-As soon as possible - thank you!
-
 ### Do you have a preferred timezone for communication?
 
 EST
