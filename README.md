@@ -90,97 +90,28 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 ## Scoping Details 
 ```
-### If you have a public code repo, please share it here:
-
-[https://github.com/redacted-cartel/pirex-gmx](https://github.com/redacted-cartel/pirex-gmx)
-
-### How many contracts are in scope?
-
-13
-
-### Total SLoC for these contracts?
-
-1981
-
-### How many external imports are there?
-
-17
-
-### How many separate interfaces and struct definitions are there for the contracts within scope?
-
-3 interfaces, 3 structs
-
-### Does most of your code generally use composition or inheritance?
-
-Inheritance to keep code lean and for security purposes (i.e. use code that has been previously audited and broadly casted)
-
-### How many external calls?
-
-Strictly only calls to contracts that are *not* ours (e.g. `asset.balanceOf(address)` calls in ERC-4626 vaults are not included, since those are all px assets): 54
-
-### What is the overall line coverage percentage provided by your tests?
-
-Using Forge's coverage command (for these contracts only: PirexFees.sol, PirexGmx.sol, PirexRewards.sol, PxERC20.sol, PxGmx.sol, AutoPxGlp.sol, AutoPxGmx.sol, PxGmxReward.sol): 98.26875%
-
-### Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?
-
-true
-
-### Please describe required context
-
-[https://gist.github.com/kphed/27920e52ef59ecb88516fefa4bd2337b](https://gist.github.com/kphed/27920e52ef59ecb88516fefa4bd2337b)
-
-### Does it use an oracle?
-
-false
-
-### Does the token conform to the ERC20 standard?
-
-Yes
-
-### Are there any novel or unique curve logic or mathematical models?
-
-No
-
-### Does it use a timelock function?
-
-No
-
-### Is it an NFT?
-
-No
-
-### Does it have an AMM?
-
-No
-
-### Is it a fork or alternate implementation of another project?
-
-true
-
-### If yes, please describe your customisations:
-
-This protocol is a variant of our Pirex-Convex protocol which can be viewed here: [https://pirex.io](https://pirex.io)
-
-### Does it use rollups?
-
-true
-
-### Is it multi-chain?
-
-true
-
-### Does it use a side-chain?
-
-true
-
-### If yes, is the sidechain evm-compatible?
-
-Yes, Avalanche
-
-### Do you have a preferred timezone for communication?
-
-EST
+- If you have a public code repo, please share it here: https://github.com/redacted-cartel/pirex-gmx
+- How many contracts are in scope?  13
+- Total SLoC for these contracts? 1981
+- How many external imports are there? 17
+- How many separate interfaces and struct definitions are there for the contracts within scope? 3 interfaces, 3 structs
+- Does most of your code generally use composition or inheritance? Inheritance to keep code lean and for security purposes (i.e. use code that has been previously audited and broadly casted)
+- How many external calls?  Strictly only calls to contracts that are *not* ours (e.g. `asset.balanceOf(address)` calls in ERC-4626 vaults are not included, since those are all px assets): 54
+- What is the overall line coverage percentage provided by your tests?  Using Forge's coverage command (for these contracts only: PirexFees.sol, PirexGmx.sol, PirexRewards.sol, PxERC20.sol, PxGmx.sol, AutoPxGlp.sol, AutoPxGmx.sol, PxGmxReward.sol): 98.26875%
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol? Yes
+- Please describe required context: https://gist.github.com/kphed/27920e52ef59ecb88516fefa4bd2337b
+- Does it use an oracle? No
+- Does the token conform to the ERC20 standard? Yes
+- Are there any novel or unique curve logic or mathematical models? No
+- Does it use a timelock function? No
+- Is it an NFT? No
+- Does it have an AMM? No
+- Is it a fork or alternate implementation of another project? Yes
+- If yes, please describe your customisations:  This protocol is a variant of our Pirex-Convex protocol which can be viewed here: https://pirex.io
+- Does it use rollups? Yes
+- Is it multi-chain? Yes
+- Does it use a side-chain? Yes
+- If yes, is the sidechain evm-compatible? Yes, Avalanche
 ```
 
 # Tests
