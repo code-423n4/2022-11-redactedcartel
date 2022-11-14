@@ -55,7 +55,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-11-redacted-cartel-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts November 18, 2022 20:00 UTC
+- Starts November 21, 2022 20:00 UTC
 - Ends November 28, 2022 20:00 UTC
 
 ## C4udit / Publicly Known Issues
