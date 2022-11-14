@@ -12,8 +12,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Contest setup
-
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
