@@ -1,50 +1,3 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted (shared with you after the contest) 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [ ] Under the "Scope" heading, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # Redacted Cartel contest details
 - Total Prize Pool: $90,500 USDC
   - HM awards: $63,750 USDC
@@ -68,27 +21,119 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+Pirex provides GMX token holders with a streamlined and convenient solution for maximizing the productivity of their GMX and GLP tokens. As a user of Pirex, you can benefit in the following ways:
+
+- Boosted yield as a result of frequent and continuous multiplier point compounding
+- Efficient, autonomous compounding of rewards into pxGMX or pxGLP (if using "Easy Mode")
+- Mint tokens backed by your future GMX rewards and sell them on our decentralized futures marketplace (if using "Hard Mode" - coming soon)
+
+And more. We're continuously improving our products and adding value to our users, and will make announcements as additional utility is available for our tokens. Please follow us on Twitter ([@redactedcartel](https://twitter.com/redactedcartel)) to stay in the loop ❤️.
+
+### How Does It Work?
+
+**_Tokens_**
+
+pxGMX: The Pirex-wrapped version of staked GMX and \*esGMX, handled in a way to maximize yield for the protocol's users (e.g. continuous, automatic, socialized multiplier point compounding). pxGMX token holders will be able to claim rewards and vote in GMX governance proposals (coming soon, after launch), just as they would with staked GMX. pxGMX cannot be redeemed for the underlying assets (those assets are essentially "blackholed" and will never resurface on the market), but can be sold for GMX, via a liquidity pool which we will seed (i.e. add initial pxGMX and GMX liquidity).
+
+\*esGMX rewards are distributed as pxGMX, which are minted at the time of an individual user's reward claim. When unclaimed/unminted, the rewards earned by esGMX-backed pxGMX will be distributed amongst existing pxGMX token holders, boosting their rewards even further!
+
+pxGLP: The Pirex-wrapped version of staked GLP, handled in the same way as pxGMX to maximize yield. pxGLP token holders can claim rewards, just as they would with staked GLP, and also redeem them for any GLP constituent asset ([check the GMX app for a complete list](https://app.gmx.io/#/buy_glp#redeem)).
+
+**_Modes_**
+
+Easy Mode: Sit back, relax, and we will autocompound the pxGMX and pxGLP rewards into more of those assets for you.
+
+Standard Mode: Manually handle your pxGMX or pxGLP by claiming rewards and other actions (e.g. vote in GMX governance with pxGMX), while still enjoying the benefits of Pirex-GMX's multiplier point auto-compounding.
+
+Hard Mode (Coming Soon): Stake your pxGMX or pxGLP and mint tokens representing their future rewards (e.g. you can stake pxGMX for 1 year and receive the equivalent of 1 year's worth of rewards - after 1 year, you can unstake your pxGMX), and sell it on our decentralized futures marketplace.
+
+### Core Contract Overview
+
+**PirexGmx.sol**
+
+- Intakes GMX-based tokens (GMX and GLP) and mints their synthetic counterparts in return (pxGMX and pxGLP)
+- Allows users to redeem their pxGLP for GLP constituent assets (same assets which GMX allows GLP to be traded for, e.g. USDC, WBTC, etc.)
+- Interacts with the GMX contracts to stake and mint assets, claim rewards, perform asset migrations (only if necessary, as a result of a contract upgrade), and more
+- Custodies GMX rewards until they are claimed and distributed via a call from the PirexRewards contract
+
+**PirexRewards.sol**
+
+- Tracks perpetually accrued/continuously streamed GMX rewards across multiple scopes: global, different reward tokens, and individual users
+- Has permission to call various reward-related methods on the PirexGmx contract for claiming and distributing rewards to users
+- Enables reward forwarding, and can also set a reward recipient on behalf of contract accounts (permissioned, used to direct rewards accrued from tokens in LP contracts - those rewards would otherwise be wasted)
+
+**PirexFees.sol**
+
+- Custodies protocol fees and distributes them to the Redacted treasury and Pirex contributor multisig
+- Allows its owner, a Redacted multisig, to modify various contract state variables (i.e. fee percent and fee recipient addresses)
+
+**PxERC20.sol**
+
+- Modifies standard ERC20 methods with calls to PirexRewards's reward accrual methods to ensure that asset ownership and reward distribution can be properly accounted for
+
+**PxGmx.sol**
+
+- Is a derivative of the PxERC20 contract
+- Represents GMX and esGMX tokens (calls the PxERC20 constructor, which it is derived from, with fixed values that is consistent with this goal)
+- Overwrites the `burn` method of PxERC20 (pxGMX cannot be redeemed for GMX or esGMX)
+
+**AutoPxGmx.sol**
+
+- Accepts GMX\* and pxGMX deposits, and issues share tokens (apxGMX) against them
+- Compounds pxGMX rewards into more pxGMX: Swaps WETH rewards into GMX via Uniswap V3 and deposits it into PirexGmx to acquire pxGMX, and claims/mints esGMX-backed pxGMX rewards
+- Provides a series of permissioned methods that enables the Pirex multisig to configure fees, incentives, and Uniswap V3 pool fee
+
+\*NOTE: GMX is converted into pxGMX.
+
+**AutoPxGlp.sol**
+
+- Accepts GLP, GLP constituent assets, and pxGLP deposits, and issues share tokens (apxGLP) against them
+- Compounds pxGLP WETH rewards into more pxGLP, and tracks esGMX-backed pxGMX rewards earned by vault users
+- Provides a series of permissioned methods that enables the Pirex multisig to configure fees, incentives, and Uniswap V3 pool fee
+
+### Contract Diagram
+
+Below are visualizations of how Pirex-GMX contracts interact with one another as well as with external contracts (e.g. GMX's contracts) as a result of different user interactions. Please note that the diagrams do not cover every single user action for the purpose of avoiding redundancy (e.g. the diagram for depositing GMX and acquiring pxGMX is more or less the same as depositing GLP or GLP constituent assets and acquiring pxGLP).
+
+### Contract Diagram: Deposit GMX, Receive pxGMX
+
+![Contract Diagram: Deposit GMX, Receive pxGMX](https://i.imgur.com/5qEKj8q.png)
+
+### Contract Diagram: Claim pxGMX/pxGLP Rewards
+
+![Contract Diagram: Claim pxGMX/pxGLP Rewards](https://i.imgur.com/NqaxI2P.png)
+
+### Contract Diagram: Auto-compound pxGMX Rewards
+
+![Contract Diagram: Auto-compound pxGMX Rewards](https://i.imgur.com/raWbR1z.png)
 
 # Scope
 
-*List all files in scope in the table below -- and feel free to add notes here to emphasize areas of focus.*
-
-| Contract | SLOC | Purpose | Libraries used |  
+| Contract | SLOC | Purpose | Libraries used |
 | ----------- | ----------- | ----------- | ----------- |
-| contracts/folder/sample.sol | 123 | This contract does XYZ | [`@openzeppelin/*`](<(https://openzeppelin.com/contracts/)>) |
+| src/Common.sol | 11 | Shared struct types | None |
+| src/PirexFees.sol | 67 | Distributes protocol fees to treasury and contributors | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
+| src/PirexGmx.sol | 645 | Handles and custodies GMX assets on behalf of users | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
+| src/PirexRewards.sol | 303 | Maintains Pirex-GMX tokens' reward-related state | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts-upgradeable/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable)>) |
+| src/PxERC20.sol | 76 | Pirex-GMX token with hooks for reward accounting upon supply and balance changes | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
+| src/PxGmx.sol | 12 | PxERC20 but with the fixed pxGMX-related values and the `burn` method overriden | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
+| src/interfaces/IAutoPxGlp.sol | 18 | AutoPxGlp interface | None |
+| src/interfaces/IPirexRewards.sol | 11 | PirexRewards interface | None |
+| src/interfaces/IProducer.sol | 16 | Producer/PirexGmx interface | None |
+| src/vaults/AutoPxGlp.sol | 302 | pxGLP auto-compounding vault | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
+| src/vaults/AutoPxGmx.sol | 250 | pxGMX auto-compounding vault | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
+| src/vaults/PirexERC4626.sol | 190 | Modified Solmate ERC-4626 contract | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
+| src/vaults/PxGmxReward.sol | 80 | Maintains esGMX-backed pxGMX reward state for AutoPxGlp | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+N/A (please review the contracts within the scope of those listed above only)
 
 # Additional Context
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
+N/A
 
-*Sponsor, please confirm/edit the information below.*
-
-## Scoping Details 
+## Scoping Details
 ```
 - If you have a public code repo, please share it here: https://github.com/redacted-cartel/pirex-gmx
 - How many contracts are in scope?  13
@@ -116,6 +161,15 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+IDE: VSCode 1.73.0 (Universal)
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+Forge: 0.2.0
+
+From inside the project directory:
+
+1. Install contract dependencies `forge i`
+2. Compile contracts `forge build`
+3. Set up and run tests
+   - Create the test variables helper script `cp scripts/loadEnv.example.sh scripts/loadEnv.sh`
+   - Define the values within the newly-created file
+   - Run the test helper script `scripts/forgeTest.sh` (along with any `forge test` arguments, flags, options, etc.)
