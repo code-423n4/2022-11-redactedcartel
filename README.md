@@ -127,7 +127,9 @@ Below are visualizations of how Pirex-GMX contracts interact with one another as
 
 ## Out of scope
 
-N/A (please review the contracts within the scope of those listed above only)
+Please note that we will not be acknowledging nor awarding "centralization risk" findings related to the contract owner (a Redacted-Pirex multisig) being able to call certain permissioned methods - some of which may jeopardize user funds safety if called with malicious intent. While we do recognize the risk, we also believe that certain privileges need to be retained by our team in order to safeguard user funds and maintain the protocol's continued operations - for example, should our contracts become incompatible with GMX's at any point (as a result of them updating their contracts), we would need to perform a full account transfer of the GMX assets to an updated version of our contract that is compatible. That said, we are taking steps to mitigate risks to users, the first of which is the utilization of a Gnosis Safe multisig in conjunction with Metropolis (previously, known as Orca), which provides us with more granular control over signature thresholds and signers (this would enable us to carry out precautionary measures such as requiring a greater # of trustworthy signers for executing higher risk, privileged actions).
+
+Thank you for understanding!
 
 # Additional Context
 
