@@ -17,8 +17,6 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 *Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards.*
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
 # Overview
 
 Pirex provides GMX token holders with a streamlined and convenient solution for maximizing the productivity of their GMX and GLP tokens. As a user of Pirex, you can benefit in the following ways:
