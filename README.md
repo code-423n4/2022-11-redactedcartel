@@ -171,5 +171,7 @@ From inside the project directory:
 2. Compile contracts `forge build`
 3. Set up and run tests
    - Create the test variables helper script `cp scripts/loadEnv.example.sh scripts/loadEnv.sh`
-   - Define the values within the newly-created file
+   - Define the values within the newly-created file*
    - Run the test helper script `scripts/forgeTest.sh` (along with any `forge test` arguments, flags, options, etc.)
+
+*NOTE: Please use either an Arbitrum or Avalanche RPC endpoint. If using the latter, exclude tests for the AutoPxGmx contract with this appended when running the test helper script: `--no-match-contract AutoPxGmx` - the pxGMX vault needs to be updated to support WAVAX => GMX swaps on TraderJoe.
