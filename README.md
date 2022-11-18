@@ -173,6 +173,52 @@ Thank you for understanding!
 |[src/interfaces/IVault.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IVault.sol)|[261](#nowhere "(nSLOC:99, SLOC:261, Lines:357)")|-|
 |Total (over 13 files):| [1218](#nowhere "(nSLOC:778, SLOC:1218, Lines:1928)")| [6.04%](#nowhere "Hit:11 / Total:182")|
 
+## External imports
+* **openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol**
+  * [src/PirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexRewards.sol)
+* **openzeppelin-contracts/contracts/access/AccessControl.sol**
+  * [src/PxERC20.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PxERC20.sol)
+* **openzeppelin-contracts/contracts/security/Pausable.sol**
+  * [src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol)
+* **solmate/auth/Owned.sol**
+  * [src/PirexFees.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexFees.sol)
+  * [src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol)
+  * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
+  * [src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)
+* **solmate/tokens/ERC20.sol**
+  * [src/PirexFees.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexFees.sol)
+  * [src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol)
+  * [src/PirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexRewards.sol)
+  * [src/PxERC20.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PxERC20.sol)
+  * [src/interfaces/IPirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IPirexRewards.sol)
+  * [src/interfaces/IProducer.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IProducer.sol)
+  * [src/vaults/AutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol)
+  * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
+  * [src/vaults/PirexERC4626.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PirexERC4626.sol)
+  * [src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)
+* **solmate/utils/FixedPointMathLib.sol**
+  * [src/vaults/AutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol)
+  * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
+  * [src/vaults/PirexERC4626.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PirexERC4626.sol)
+* **solmate/utils/ReentrancyGuard.sol**
+  * [src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol)
+  * [src/vaults/AutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol)
+  * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
+* **solmate/utils/SafeCastLib.sol**
+  * [src/PirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexRewards.sol)
+  * [src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)
+* **solmate/utils/SafeTransferLib.sol**
+  * [src/PirexFees.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexFees.sol)
+  * [src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol)
+  * [src/PirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexRewards.sol)
+  * [src/vaults/AutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol)
+  * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
+  * [src/vaults/PirexERC4626.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PirexERC4626.sol)
+  * [src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)
+/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol)
+* **v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol**
+  * ~~[src/interfaces/IV3SwapRouter.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IV3SwapRouter.sol)~~
+
 # Additional Context
 
 N/A
