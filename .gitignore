@@ -109,4 +109,3 @@ dist
 # Forge
 cache/
 out/
-scripts/loadEnv.sh
