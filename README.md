@@ -110,18 +110,18 @@ Below are visualizations of how Pirex-GMX contracts interact with one another as
 | Contract | SLOC | Purpose | Libraries used |
 | ----------- | ----------- | ----------- | ----------- |
 | src/Common.sol | 11 | Shared struct types | None |
-| src/PirexFees.sol | 67 | Distributes protocol fees to treasury and contributors | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
-| src/PirexGmx.sol | 645 | Handles and custodies GMX assets on behalf of users | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
-| src/PirexRewards.sol | 303 | Maintains Pirex-GMX tokens' reward-related state | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts-upgradeable/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable)>) |
-| src/PxERC20.sol | 76 | Pirex-GMX token with hooks for reward accounting upon supply and balance changes | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
-| src/PxGmx.sol | 12 | PxERC20 but with the fixed pxGMX-related values and the `burn` method overriden | [`solmate/*`](<(https://github.com/transmissions11/solmate)>), [`openzeppelin-contracts/*`](<(https://github.com/OpenZeppelin/openzeppelin-contracts)>) |
+| src/PirexFees.sol | 67 | Distributes protocol fees to treasury and contributors | [`solmate/*`](https://github.com/transmissions11/solmate) |
+| src/PirexGmx.sol | 645 | Handles and custodies GMX assets on behalf of users | [`solmate/*`](https://github.com/transmissions11/solmate), [`openzeppelin-contracts/*`](https://github.com/OpenZeppelin/openzeppelin-contracts) |
+| src/PirexRewards.sol | 303 | Maintains Pirex-GMX tokens' reward-related state | [`solmate/*`](https://github.com/transmissions11/solmate), [`openzeppelin-contracts-upgradeable/*`](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable) |
+| src/PxERC20.sol | 76 | Pirex-GMX token with hooks for reward accounting upon supply and balance changes | [`solmate/*`](https://github.com/transmissions11/solmate), [`openzeppelin-contracts/*`](https://github.com/OpenZeppelin/openzeppelin-contracts) |
+| src/PxGmx.sol | 12 | PxERC20 but with the fixed pxGMX-related values and the `burn` method overriden | [`solmate/*`](https://github.com/transmissions11/solmate), [`openzeppelin-contracts/*`](https://github.com/OpenZeppelin/openzeppelin-contracts) |
 | src/interfaces/IAutoPxGlp.sol | 18 | AutoPxGlp interface | None |
 | src/interfaces/IPirexRewards.sol | 11 | PirexRewards interface | None |
 | src/interfaces/IProducer.sol | 16 | Producer/PirexGmx interface | None |
-| src/vaults/AutoPxGlp.sol | 302 | pxGLP auto-compounding vault | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
-| src/vaults/AutoPxGmx.sol | 250 | pxGMX auto-compounding vault | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
-| src/vaults/PirexERC4626.sol | 190 | Modified Solmate ERC-4626 contract | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
-| src/vaults/PxGmxReward.sol | 80 | Maintains esGMX-backed pxGMX reward state for AutoPxGlp | [`solmate/*`](<(https://github.com/transmissions11/solmate)>) |
+| src/vaults/AutoPxGlp.sol | 302 | pxGLP auto-compounding vault | [`solmate/*`](https://github.com/transmissions11/solmate) |
+| src/vaults/AutoPxGmx.sol | 250 | pxGMX auto-compounding vault | [`solmate/*`](https://github.com/transmissions11/solmate) |
+| src/vaults/PirexERC4626.sol | 190 | Modified Solmate ERC-4626 contract | [`solmate/*`](https://github.com/transmissions11/solmate) |
+| src/vaults/PxGmxReward.sol | 80 | Maintains esGMX-backed pxGMX reward state for AutoPxGlp | [`solmate/*`](https://github.com/transmissions11/solmate) |
 
 ## Out of scope
 
