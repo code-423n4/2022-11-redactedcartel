@@ -215,7 +215,6 @@ Thank you for understanding!
   * [src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)
   * [src/vaults/PirexERC4626.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PirexERC4626.sol)
   * [src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)
-
 * **v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol**
   * ~~[src/interfaces/IV3SwapRouter.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IV3SwapRouter.sol)~~
 
