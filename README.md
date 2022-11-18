@@ -129,6 +129,50 @@ Please note that we will not be acknowledging nor awarding "centralization risk"
 
 Thank you for understanding!
 
+## Scope + Test Coverage
+### Files in scope
+|File|[SLOC](#nowhere "(nSLOC, SLOC, Lines)")|[Coverage](#nowhere "(Lines hit / Total)")|
+|:-|:-:|:-:|
+|_Contracts (8)_|
+|[src/PxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PxGmx.sol)|[12](#nowhere "(nSLOC:8, SLOC:12, Lines:24)")|-|
+|[src/PirexFees.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexFees.sol)|[67](#nowhere "(nSLOC:61, SLOC:67, Lines:117)")|[100.00%](#nowhere "(Hit:16 / Total:16)")|
+|[src/PxERC20.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PxERC20.sol) [🧮](#nowhere "Uses Hash-Functions") [Σ](#nowhere "Unchecked Blocks")|[74](#nowhere "(nSLOC:58, SLOC:74, Lines:134)")|[100.00%](#nowhere "(Hit:21 / Total:21)")|
+|[src/vaults/PxGmxReward.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PxGmxReward.sol)|[80](#nowhere "(nSLOC:80, SLOC:80, Lines:134)")|[78.13%](#nowhere "(Hit:25 / Total:32)")|
+|[src/vaults/AutoPxGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGmx.sol)|[250](#nowhere "(nSLOC:210, SLOC:250, Lines:404)")|[89.39%](#nowhere "(Hit:59 / Total:66)")|
+|[src/vaults/AutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/AutoPxGlp.sol) [💰](#nowhere "Payable Functions")|[302](#nowhere "(nSLOC:236, SLOC:302, Lines:509)")|[91.11%](#nowhere "(Hit:82 / Total:90)")|
+|[src/PirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexRewards.sol)|[303](#nowhere "(nSLOC:253, SLOC:303, Lines:480)")|[98.98%](#nowhere "(Hit:97 / Total:98)")|
+|[src/PirexGmx.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/PirexGmx.sol) [💰](#nowhere "Payable Functions")|[645](#nowhere "(nSLOC:512, SLOC:645, Lines:974)")|[100.00%](#nowhere "(Hit:172 / Total:172)")|
+|_Abstracts (1)_|
+|[src/vaults/PirexERC4626.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/vaults/PirexERC4626.sol) [📤](#nowhere "Initiates ETH Value Transfer")|[190](#nowhere "(nSLOC:121, SLOC:190, Lines:301)")|[75.00%](#nowhere "(Hit:39 / Total:52)")|
+|_Interfaces (3)_|
+|[src/interfaces/IPirexRewards.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IPirexRewards.sol)|[11](#nowhere "(nSLOC:5, SLOC:11, Lines:14)")|-|
+|[src/interfaces/IProducer.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IProducer.sol)|[16](#nowhere "(nSLOC:6, SLOC:16, Lines:20)")|-|
+|[src/interfaces/IAutoPxGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IAutoPxGlp.sol)|[18](#nowhere "(nSLOC:4, SLOC:18, Lines:20)")|-|
+|_Structs (1)_|
+|[src/Common.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/Common.sol)|[11](#nowhere "(nSLOC:11, SLOC:11, Lines:14)")|-|
+|Total (over 13 files):| [1979](#nowhere "(nSLOC:1565, SLOC:1979, Lines:3145)")| [93.42%](#nowhere "Hit:511 / Total:547")|
+
+
+### All other source contracts (not in scope)
+|File|[SLOC](#nowhere "(nSLOC, SLOC, Lines)")|[Coverage](#nowhere "(Lines hit / Total)")|
+|:-|:-:|:-:|
+|_Contracts (2)_|
+|[src/external/DelegateRegistry.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/external/DelegateRegistry.sol)|[23](#nowhere "(nSLOC:23, SLOC:23, Lines:46)")|[91.67%](#nowhere "(Hit:11 / Total:12)")|
+|[src/external/RewardTracker.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/external/RewardTracker.sol) [🖥](#nowhere "Uses Assembly") [👥](#nowhere "DelegateCall")|[747](#nowhere "(nSLOC:539, SLOC:747, Lines:1240)")|[0.00%](#nowhere "(Hit:0 / Total:170)")|
+|_Interfaces (11)_|
+|[src/interfaces/IRewardDistributor.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IRewardDistributor.sol)|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:6)")|-|
+|[src/interfaces/IWETH.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IWETH.sol) [💰](#nowhere "Payable Functions")|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:7)")|-|
+|[src/interfaces/IGlpManager.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IGlpManager.sol)|[6](#nowhere "(nSLOC:6, SLOC:6, Lines:11)")|-|
+|[src/interfaces/ITimelock.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/ITimelock.sol)|[7](#nowhere "(nSLOC:7, SLOC:7, Lines:13)")|-|
+|[src/interfaces/IBasePositionManager.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IBasePositionManager.sol)|[8](#nowhere "(nSLOC:5, SLOC:8, Lines:11)")|-|
+|[src/interfaces/IStakedGlp.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IStakedGlp.sol)|[9](#nowhere "(nSLOC:5, SLOC:9, Lines:14)")|-|
+|[src/interfaces/IGMX.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IGMX.sol)|[11](#nowhere "(nSLOC:8, SLOC:11, Lines:18)")|-|
+|[src/interfaces/IVaultPriceFeed.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IVaultPriceFeed.sol)|[41](#nowhere "(nSLOC:18, SLOC:41, Lines:57)")|-|
+|[src/interfaces/IRewardRouterV2.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IRewardRouterV2.sol) [💰](#nowhere "Payable Functions")|[47](#nowhere "(nSLOC:22, SLOC:47, Lines:68)")|-|
+|[src/interfaces/IV3SwapRouter.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IV3SwapRouter.sol) [💰](#nowhere "Payable Functions")|[50](#nowhere "(nSLOC:38, SLOC:50, Lines:80)")|-|
+|[src/interfaces/IVault.sol](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IVault.sol)|[261](#nowhere "(nSLOC:99, SLOC:261, Lines:357)")|-|
+|Total (over 13 files):| [1218](#nowhere "(nSLOC:778, SLOC:1218, Lines:1928)")| [6.04%](#nowhere "Hit:11 / Total:182")|
+
 # Additional Context
 
 N/A
