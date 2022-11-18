@@ -272,5 +272,5 @@ Please use our fork of Slither here: [https://github.com/redacted-cartel/slither
 Run the command below from within the project directory to set up the project from a fresh start:
 
 ```
-rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && forge i
+rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && forge i && scripts/forgeTest.sh --gas-report
 ```
