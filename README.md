@@ -259,9 +259,19 @@ From inside the project directory:
 
 1. Install contract dependencies `forge i`
 2. Compile contracts `forge build`
-3. Set up and run tests
-   - Create the test variables helper script `cp scripts/loadEnv.example.sh scripts/loadEnv.sh`
-   - Define the values within the newly-created file*
-   - Run the test helper script `scripts/forgeTest.sh` (along with any `forge test` arguments, flags, options, etc.)
+3. Update the `FORK_URL` variable within the [scripts/loadEnv.sh](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/scripts/loadEnv.sh) file with your Arbitrum RPC endpoint - the other two variables are prepopulated for you with values for tests ran on Arbitrum
+4. Run the test helper script [scripts/forgeTest.sh](https://github.com/code-423n4/2022-11-redactedcartel/blob/main/scripts/forgeTest.sh) (along with any `forge test` arguments, flags, options, etc.)
 
 *NOTE: Please use either an Arbitrum or Avalanche RPC endpoint. If using the latter, exclude tests for the AutoPxGmx contract with this appended when running the test helper script: `--no-match-contract AutoPxGmx` - the pxGMX vault needs to be updated to support WAVAX => GMX swaps on TraderJoe.
+
+# Slither
+
+Please use our fork of Slither here: [https://github.com/redacted-cartel/slither](https://github.com/redacted-cartel/slither).
+
+# Debugging
+
+Run the command below from within the project directory to set up the project from a fresh start:
+
+```
+rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && forge i
+```
