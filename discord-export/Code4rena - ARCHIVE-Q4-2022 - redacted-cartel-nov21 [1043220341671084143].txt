@@ -1,0 +1,1940 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / redacted-cartel-nov21
+==============================================================
+
+[11/18/2022 17:53] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $90,500 USDC **Redacted Cartel** contest!
+
+📆 Contest opens 11/21/2022 20:00 (20:00 UTC) and runs through 11/28/2022 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the Redacted Cartel team, particularly @kp - no DMs, ty, @makudonarudo and @never, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-11-redacted-cartel-contest
+
+{Embed}
+https://code4rena.com/contests/2022-11-redacted-cartel-contest
+Code4rena Redacted Cartel contest
+$90,500 USDC
+21 November 2022—28 November 2022
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+{Reactions}
+🎉 (11) ◼️ (2) 
+
+[11/18/2022 17:57] ppmoon69
+:btrflyheart:
+
+{Reactions}
+🦋 (17) 
+
+[11/20/2022 02:36] chaduke3730
+cannot wait
+
+
+[11/20/2022 03:50] ladboy233
+:hi5:
+
+
+[11/20/2022 15:32] koolexc
+same here 😄
+
+
+[11/21/2022 06:36] mahdi9606
+It's my first try to audit a project 😄  .
+
+{Reactions}
+hi5 (6) 🙌 (4) 
+
+[11/21/2022 09:48] eyexploit
+🔋 full charge
+
+{Reactions}
+🔋 (5) 
+
+[11/21/2022 18:13] pedr02b2
+:hi5:
+
+
+[11/21/2022 19:27] ppmoon69
+Good luck everyone and thank you - the 🦋s appreciate you
+
+
+[11/21/2022 19:27] ppmoon69
+:BFLYCHILL:
+
+{Reactions}
+PU_PepeHappyCry (4) praisethesun (4) 
+
+[11/21/2022 20:12] nicobevi.eth
+tests are not working for me, any idea?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-8EFD2.png
+
+{Reactions}
+same (4) 
+
+[11/21/2022 20:18] illilli000
+Please try the `Debugging` command at the very bottom of the readme
+
+
+[11/21/2022 20:30] nicobevi.eth
+that worked, thanks
+
+{Reactions}
+👍 
+
+[11/21/2022 20:31] thepicodes (pinned)
+**Automated Findings:** https://gist.github.com/Picodes/f319a211425dea082c76ef89f25f53ca
+
+
+[11/21/2022 20:32] itsmetechjay
+Pinned a message.
+
+
+[11/21/2022 20:33] itsmetechjay (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **https://gist.github.com/Picodes/f319a211425dea082c76ef89f25f53ca
+
+This will also be linked in the contest README file shortly.
+
+{Reactions}
+thankyou (2) 
+
+[11/21/2022 20:33] itsmetechjay
+Pinned a message.
+
+
+[11/21/2022 20:35] ppmoon69
+Thanks ser :cheers:
+
+{Reactions}
+👍 
+
+[11/21/2022 21:05] 0xsmartcontract
+tests are not working for me too and i give this error although use  `Debugging`  command 
+
+my error; 
+```js
+fatal: /x/2022-11-redactedcartel/lib: '/x/2022-11-redactedcartel/lib' is outside repository at '/x/2022-11-redactedcartel'
+```
+
+
+[11/21/2022 21:14] carrotsmuggler
+can't run tests. tried debug command but still getting the same error
+
+
+[11/21/2022 21:21] aviggiano
+I was getting the same error, then retried ant it worked 🤔
+
+
+[11/21/2022 22:43] aviggiano
+I'm getting a bunch of errors like these (trying to run `./scripts/forgeTest.sh`)
+
+```
+2022-11-21T22:42:54.966497Z ERROR sharedbackend: Failed to send/recv `storage` err=GetStorage(0x68863dde14303bced249ca8ec6af85d4694dea6a, 55563546861957533350042983098277423025030024113094683779833167188429634167592,
+```
+
+
+[11/21/2022 22:45] calabashsquash
+Yeah me too. And tests stalling
+
+
+[11/21/2022 22:48] illilli000
+can you try modifying `scripts/loadEnv.sh` to use your own alchemy arb-mainnet FORK_URL?
+
+{Reactions}
+👍 
+
+[11/21/2022 22:49] calabashsquash
+I have tried that, using a private Alchemy one.
+
+
+[11/21/2022 22:49] clems4ever
+I have done it already but it does not solve the issue. It seems random.
+
+{Reactions}
+☝️ (2) 
+
+[11/21/2022 22:50] illilli000
+hmm, not sure. when I was testing things I know the tests took a long time to run, but I never hit any errors. the sponsor will have to help debug what's going on here
+
+
+[11/21/2022 22:57] calabashsquash
+It seems like it could be just some classic Arbitrum RPC issues. The same issue has randomly (yet consistently) disappeared for me now with nothing changed.
+
+
+[11/21/2022 23:00] aviggiano
+Yeah I changed the RPC and now it's working
+
+
+[11/21/2022 23:01] clems4ever
+For me the problem reappears now and then, I'm using the Alchemy RPC url but I had the same issue with the original url.
+
+
+[11/21/2022 23:54] 0xpathfindr
+Cannot run build : 
+
+
+Getting this error when running `forge build`
+
+
+```
+[⠊] Compiling...
+Error: 
+Failed to resolve file: "/Users/computer/2022-11-redactedcartel/lib/solmate/src/auth/Owned.sol": No such file or directory (os error 2).
+    --> "/Users/computer/2022-11-redactedcartel/src/PirexFees.sol"
+        "solmate/auth/Owned.sol"
+    Check configured remappings.```
+
+
+[11/21/2022 23:58] calabashsquash
+Have you installed depedencies with `forge i`?
+
+
+[11/21/2022 23:59] 0xpathfindr
+I did. But didn’t receive a response from terminal
+
+
+[11/21/2022 23:59] 0xpathfindr
+What is the expected response message if any?
+
+
+[11/22/2022 00:00] calabashsquash
+I think it's OK if the response is empty. What is the output of `ls lib`?
+
+
+[11/22/2022 00:00] 0xpathfindr
+Will have to get back to you on this. Just stepped out. Thanks for the help so far though.
+
+
+[11/22/2022 00:10] kiki_dev
+Sorry to jump in but I tried to install dependencies with forge i. And it didn’t work. Is there something i need to do prior to that for installing dependencies with forge i?
+
+
+[11/22/2022 00:34] carrotsmuggler (pinned)
+when cloning, use --recursive to download the solmate submodules as well
+
+
+[11/22/2022 00:35] carrotsmuggler
+use --recursive when cloning to install submodules. check the debug command at the end of the readme, it use --recurse-submodules which is the same thing
+
+{Reactions}
+thankyou 
+
+[11/22/2022 01:16] ppmoon69
+For those with issues running the tests reliably/quickly, Alchemy has been very reliable for us as a node provider, and the number of fuzz runs can be reduced by configuring the foundry.toml file
+
+If you're using forge across multiple projects or different chains, clearing its cache may sometimes solve obscure issues related to it
+
+
+[11/22/2022 01:27] chaduke3730
+@mahdikarimiI started from last month
+
+{Reactions}
+👍 
+
+[11/22/2022 01:59] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-F9AA0.png
+
+
+[11/22/2022 01:59] ladboy233
+How do run the test exactly?
+
+
+[11/22/2022 01:59] ladboy233
+forge test --fork-url "https://rpc.ankr.com/arbitrum" --fork-block-number 38632697 --use "0.8.17"
+
+{Embed}
+https://rpc.ankr.com/arbitrum%22
+Decentralized Infrastructure to Build and Earn in Web3
+Get faster, more reliable multi-chain development tools
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/logo-545FC.png
+
+
+[11/22/2022 01:59] ladboy233
+this does not work.
+
+
+[11/22/2022 02:00] deliriusz
+execute the command from the bottom of doc:
+rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && foundryup && forge i && scripts/forgeTest.sh --gas-report
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel.git
+GitHub - code-423n4/2022-11-redactedcartel
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+
+[11/22/2022 02:01] ladboy233
+It works?
+
+
+[11/22/2022 02:01] ladboy233
+Really?
+
+
+[11/22/2022 02:01] ladboy233
+I do not believe so.
+
+
+[11/22/2022 02:02] deliriusz
+yes, it does. and use Alchemy or any other node provider as described in https://github.com/code-423n4/2022-11-redactedcartel#tests section
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel
+GitHub - code-423n4/2022-11-redactedcartel
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+
+[11/22/2022 02:02] ladboy233
+```solidity
+forge test --fork-url "https://arb1.arbitrum.io/rpc" --fork-block-number 38632697 --use "0.8.17"
+```
+
+
+[11/22/2022 02:02] ladboy233
+this does not work.
+
+
+[11/22/2022 02:03] ladboy233
+Did you just change the node provider RPC url and it works?
+
+
+[11/22/2022 02:04] deliriusz
+first you have to execute the command I sent before - I had the same issue as you and it really helps, as it pulls required submodules and sets everything up
+
+
+[11/22/2022 02:05] ladboy233
+git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel.git
+GitHub - code-423n4/2022-11-redactedcartel
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+
+[11/22/2022 02:05] ladboy233
+I just execute this and do cd and forge install
+
+
+[11/22/2022 02:05] ladboy233
+scripts/forgeTest.sh --gas-report runs.
+
+
+[11/22/2022 02:06] ladboy233
+forge test command fails.
+
+
+[11/22/2022 02:06] ladboy233
+@kp - no DMs, ty @never could you please help me?
+
+
+[11/22/2022 02:06] ladboy233
+is this only because of the RPC endpoint?
+
+
+[11/22/2022 02:08] ladboy233
+Nope. private arbitrium alchemy RPC gets me the same result.
+
+
+[11/22/2022 02:08] ladboy233
+Why is that?
+
+
+[11/22/2022 02:09] ladboy233
+I am in windows I cannot run a single command below
+
+
+[11/22/2022 02:09] ladboy233
+```solidity
+rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && foundryup && forge i && scripts/forgeTest.sh --gas-report
+```
+
+
+[11/22/2022 02:09] ladboy233
+I think the only lilne that matters is still
+
+
+[11/22/2022 02:09] ladboy233
+```solidity
+ git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8
+```
+
+
+[11/22/2022 02:09] ladboy233
+Am I wrong????
+
+
+[11/22/2022 02:12] faithxia
+you are cloning using `--recurse-submodules` right? If so, based on what you said, the only difference seems to be that you haven't run `foundryup`. I know that's just to update to the latest foundry, but just making sure you've done that before running `forge i`
+
+
+[11/22/2022 02:15] ladboy233
+Thanks. What is the foundry version you used?
+
+
+[11/22/2022 02:15] ladboy233
+This is the one I use.
+
+
+[11/22/2022 02:15] ladboy233
+forge 0.2.0 (8b0af47 2022-11-05T22:24:55.0374315Z)
+
+
+[11/22/2022 02:15] ladboy233
+```solidity
+forge 0.2.0 (8b0af47 2022-11-05T22:24:55.0374315Z)
+```
+
+
+[11/22/2022 02:18] faithxia
+```forge 0.2.0 (cb925b1 2022-11-21T00:07:24.422793907Z)```
+
+
+[11/22/2022 02:21] ladboy233
+ok let me try
+
+
+[11/22/2022 02:21] ladboy233
+😢
+
+
+[11/22/2022 02:36] ladboy233
+I would appreciate if anyone share their steps if you are using windows and you get the test running successfully.
+
+
+[11/22/2022 02:48] ladboy233
+I give up. Same error again 🙂
+
+
+[11/22/2022 02:50] faithxia
+you could try using WSL2, that's worked for me
+
+
+[11/22/2022 02:51] faithxia (pinned)
+installing foundry in WSL2 is a one step process (install -> restart terminal), and then as long as you have `git` installed, you can run the exact `debugging` command and test it out
+
+
+[11/22/2022 02:52] faithxia
+not sure what code editor you use but visual studio code works out of the box with WSL2 as well, so no real reason not to use it at this point
+
+
+[11/22/2022 02:52] ladboy233
+ok thanks
+
+
+[11/22/2022 02:53] ladboy233
+🥲
+
+
+[11/22/2022 03:11] ladboy233
+I reinstall the foundry.
+
+
+[11/22/2022 03:12] ladboy233
+```solidity
+forge 0.2.0 (251d7d6 2022-11-22T02:54:17.1001327Z)
+```
+
+
+[11/22/2022 03:12] ladboy233
+this is the version I currently used.
+
+
+[11/22/2022 03:12] ladboy233
+And It damn works!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[11/22/2022 03:12] ladboy233
+I do not want to give up honestly.....
+
+
+[11/22/2022 03:12] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-B7483.png
+
+
+[11/22/2022 03:12] ladboy233
+:hi5:
+
+
+[11/22/2022 03:13] ladboy233
+Thanks for your help.
+
+
+[11/22/2022 03:13] faithxia
+no worries, glad you got it working
+
+
+[11/22/2022 03:37] birdy0219
+Yeh I'm getting a weird bunch of errors too, seemingly related to the DEV helper address
+```bash
+[FAIL. Reason: Invalid data] setUp() (gas: 0)
+Traces:
+  [1438170] → new <Unknown>@0xb4c79daB8f259C7Aee6E5b2Aa729821864227e84
+    ├─ [0] VM::9d2ad72a() [staticcall]
+```
+
+
+[11/22/2022 03:39] birdy0219
+Recompiling foundry now, centos 8 only just upped the glibc to 2.28 allowing compatibility for an easy foundry install, now foundry wants 2.29 so back to building from source
+
+
+[11/22/2022 03:54] birdy0219
+They joys of dev teams using nightly builds pushed to gh as a release I guess
+```$ forge --version
+forge 0.2.0 (9d64f1f 2022-10-26T00:44:05.146021755Z)```
+
+
+[11/22/2022 03:54] birdy0219
+```$ forge --version
+forge 0.2.0 (251d7d6 2022-11-22T03:47:43.326033204Z)```
+
+
+[11/22/2022 04:01] birdy0219
+Previous build I had seemingly was not polling the rpc correctly perhaps, only 3 calls prior to failing. 1000+ calls when all the tests worked
+
+
+[11/22/2022 05:13] redm3.eth
+okay finally got this code running had to open wsl2 in vscode then run in terminal gg had to change bios settings on PC... what a pain 😄
+
+
+[11/22/2022 05:26] 0x_white_devil
+I'm gonna try this, this part is a pure headache for me
+
+
+[11/22/2022 05:37] redm3.eth
+yes this runs 😄
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-C65AA.png
+
+
+[11/22/2022 06:14] 0x_white_devil
+Works perfectly for me as well
+
+
+[11/22/2022 07:56] saksham#7993
+Any sponsor available for a DM?
+
+
+[11/22/2022 08:27] 0xpathfindr
+❤️
+
+
+[11/22/2022 08:33] 0xpathfindr
+This worked. Thank you very much
+
+{Reactions}
+👍 
+
+[11/22/2022 08:43] kchmielewski.eth
+Does Pirex work the same way for DMX as it works for CVX?
+
+
+[11/22/2022 08:43] carrotsmuggler
+yes just quickly reinstalled my OS since ubuntu 18 didnt suport foundryup due to glibc issues but now ubuntu22 does and now got the tests running!. Looks like you need the absolute latest version of forge available through foundryup, and if you have compiled form source, try pulling again and recompiling! or make the switch to foundryup like i did
+
+
+[11/22/2022 08:45] 0xpathfindr
+@carrotsmuggler Any different commands needed to run `forge test` not working on my side yet. Also what is the command to run local evm node with `anvil`
+
+
+[11/22/2022 08:47] carrotsmuggler
+use the script in script/forgeTest.sh. it will load in the env variables
+
+{Reactions}
+👍 
+
+[11/22/2022 09:39] 0xpathfindr
+Thanks again
+
+
+[11/22/2022 11:34] kartoonjoy
+Pinned a message.
+
+
+[11/22/2022 11:34] kartoonjoy
+Pinned a message.
+
+
+[11/22/2022 11:36] kartoonjoy
+Pinned a message.
+
+
+[11/22/2022 11:41] Franfran#5067
+DM'd u @never 🙂
+
+
+[11/22/2022 12:39] koolexc
+Could you please explain what are GLP constituent assets? 
+> Allows users to redeem their pxGLP for GLP constituent assets (same assets which GMX allows GLP to be traded for, e.g. USDC, WBTC, etc.)
+
+
+[11/22/2022 12:43] ppmoon69
+sorry for the late response, clearing forge's cache is a potential fix also (as an alternative to reinstalling forge entirely)
+
+
+[11/22/2022 12:43] ppmoon69
+any asset which GMX has whitelisted and can be used to mint GLP
+
+{Reactions}
+👌🏻 
+
+[11/22/2022 12:45] koolexc
+meaning that I can use pxGLP to receive an asset such as USDC ...etc.?
+
+
+[11/22/2022 12:46] ppmoon69
+you can see those tokens via their UI: https://app.gmx.io/#/buy_glp
+
+or read them from the contract (`whitelistedTokens` - indexes 0 through 8): https://arbiscan.io/address/0x489ee077994b6658eafa855c308275ead8097c4a#readContract
+
+{Embed}
+https://arbiscan.io/address/0x489ee077994b6658eafa855c308275ead8097c4a
+GMX: Vault | Address 0x489ee077994b6658eafa855c308275ead8097c4a | A...
+The Contract Address 0x489ee077994b6658eafa855c308275ead8097c4a page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on Arbiscan.
+
+{Embed}
+https://app.gmx.io/
+GMX
+GMX Decentralized Perpetual Exchange
+
+
+[11/22/2022 12:46] ppmoon69
+that's right ser
+
+
+[11/22/2022 12:46] ppmoon69
+and vice versa
+
+
+[11/22/2022 12:46] ppmoon69
+whitelisted asset => GLP => pxGLP
+pxGLP => GLP => whitelisted asset
+
+{Reactions}
+👍🏻 
+
+[11/22/2022 12:47] koolexc
+Gotcha. Thank you!
+
+
+[11/22/2022 12:47] ppmoon69
+:cheers:
+
+
+[11/22/2022 12:48] ppmoon69
+it's a standard forge project :PES_Cry:
+
+
+[11/22/2022 12:51] ppmoon69
+the base principle is the same: we're creating an augmented version of a protocol's token and offering manual and automated means of managing the tokens' rewards, as well as providing the ability to mint future yield tokens (coming later for Pirex-GMX - not part of the audit yet)
+
+{Reactions}
+😍 
+
+[11/22/2022 12:52] ppmoon69
+unless it's absolutely necessary, please post your messages here so that we can all assist - this also benefits other Wardens later who have the same questions
+
+
+[11/22/2022 13:06] koolexc
+What are (Sans fees) in "Contract Diagram: Deposit GMX, Receive pxGMX" ?
+
+
+[11/22/2022 13:14] ppmoon69
+specific to that diagram... the user receives pxGMX minus the amount that is withheld/distributed as protocol fees
+
+{Reactions}
+👌🏻 
+
+[11/22/2022 13:14] ppmoon69
+sans fees = less/without fees
+
+
+[11/22/2022 13:15] koolexc
+got it thanks
+
+
+[11/22/2022 13:15] ppmoon69
+np, thanks for the questions ser
+
+{Reactions}
+💚 
+
+[11/22/2022 13:16] ppmoon69
+hi everyone, @makudonarudo is my smart contracts dev peer @ redacted cartel - he'll be working with me to answer questions and address audit findings for the contest
+
+{Reactions}
+🙏 
+
+[11/22/2022 13:42] koolexc
+forge test is failing. any hint? building and everything else has no problems
+
+{Reactions}
+same 
+
+[11/22/2022 13:55] koolexc
+maybe because of the RPC end-point. any suggestion where can I use one for arbitrum?
+
+
+[11/22/2022 13:59] faithxia
+you can make an account at alchemy.com and create an app to get your own endpoint
+
+
+[11/22/2022 14:00] koolexc
+Thank you. I just signed up and trying to see if it works.
+
+
+[11/22/2022 14:01] koolexc
+works successfully now!
+
+
+[11/22/2022 14:02] koolexc
+@bulej93 hope it works for you as well.
+
+
+[11/22/2022 14:08] dinesh11g
+are 2022-11-redactedcartel/test/ in scope?
+
+
+[11/22/2022 14:09] dinesh11g
+@kp - no DMs, ty
+
+
+[11/22/2022 14:09] dinesh11g
+this outputs gas issues?
+
+
+[11/22/2022 14:12] deliriusz
+this first sets up the project and runs tests with gas report summary
+
+
+[11/22/2022 14:16] dinesh11g
+@makudonarudo @never
+
+
+[11/22/2022 14:20] road220
+`if (!gmxVault.whitelistedTokens(token)) revert InvalidToken(token);`
+
+Is there a list of tokens that 100% will be whitelisted?
+
+
+[11/22/2022 14:21] koolexc
+@m_Rassska
+
+{Reactions}
+😂 🔥 thankyou 
+
+[11/22/2022 14:21] koolexc
+😄
+.
+
+
+[11/22/2022 14:28] koolexc
+What is fsGLP used for? I couldn't find it in README.
+I'm trying to understand "depositFsGlp" function
+>  // Transfer the caller's fsGLP (unstaked for the user, staked for this contract)
+>         stakedGlp.transferFrom(msg.sender, address(this), amount);
+
+
+[11/22/2022 14:29] kchmielewski.eth
+Got it, thanks!
+
+
+[11/22/2022 14:30] ppmoon69
+fsGLP is fee + staked GLP and it earns protocol rewards 
+
+https://gmxio.gitbook.io/gmx/glp
+
+{Embed}
+https://gmxio.gitbook.io/gmx/glp
+GLP
+GLP is the platform's liquidity provider token.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/-MiFo105FaddJLxO_TR0-821B9.png
+
+{Reactions}
+thankyou (2) 
+
+[11/22/2022 14:30] ppmoon69
+np!
+
+{Reactions}
+hearteyesshark 
+
+[11/22/2022 14:31] dinesh11g
+@kp - no DMs, ty
+
+
+[11/22/2022 14:31] dinesh11g
+here
+
+
+[11/22/2022 14:35] dinesh11g
+@kp - no DMs, ty
+
+
+[11/22/2022 14:35] ppmoon69
+they are not ser, only whatever is listed
+
+
+[11/22/2022 14:36] dinesh11g
+ok
+
+
+[11/22/2022 15:34] ch_301
+This is not working on the window for me 🤔 
+```
+forge test -vv --fork-url https://arb-mainnet.g.alchemy.com/v2/xxxxxxxxxxxxxxxxxxxxxxxx --fork-block-number 38632697 --use 0.8.17
+```
+
+{Reactions}
+same 
+
+[11/22/2022 15:42] ppmoon69
+can you try this? 
+
+```
+rm -Rf 2022-11-redactedcartel || true && git clone https://github.com/code-423n4/2022-11-redactedcartel.git --recurse-submodules -j8 && cd 2022-11-redactedcartel && foundryup && forge i && scripts/forgeTest.sh --gas-report
+```
+
+https://github.com/code-423n4/2022-11-redactedcartel#debugging
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel
+GitHub - code-423n4/2022-11-redactedcartel
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+{Reactions}
+👍 
+
+[11/22/2022 15:42] ppmoon69
+if it still doesn't work, you'll want to clear forge's cache
+
+
+[11/22/2022 15:42] ppmoon69
+`forge cache clean`
+
+
+[11/22/2022 15:43] rvierdiiev
+you need first to update rustc, then you need to do foundryup(which doesn't exists on windows)
+so after rustc update you need to reinstall last version of foundry
+
+
+[11/22/2022 15:43] rvierdiiev
+then it will start working finally
+
+
+[11/22/2022 16:13] ch_301 (pinned)
+For Windows Users this work for me
+✅  1-
+```
+rustup update
+```
+✅  2-
+```
+cargo install --git https://github.com/foundry-rs/foundry foundry-cli anvil --bins --locked
+
+```
+✅  3-
+```
+forge test -vv --fork-url https://arb-mainnet.g.alchemy.com/v2/xxxxxxxxxxxxxxxxxxxxxxxx --fork-block-number 38632697 --use 0.8.17
+```
+@rvierdiiev  Thank you
+
+{Reactions}
+nice (3) 
+
+[11/22/2022 16:16] rvierdiiev
+you are welcome
+
+{Reactions}
+thankyou 
+
+[11/22/2022 16:18] kartoonjoy
+Pinned a message.
+
+
+[11/22/2022 17:24] rvierdiiev
+@kp - no DMs, ty can you pls accept friend request?
+
+
+[11/22/2022 17:25] ppmoon69
+if you have a question, please post it here for the benefit of others who may be wondering the same thing, or may have the same question in the future
+
+
+[11/22/2022 17:25] ppmoon69
+unless it's absolutely crucial
+
+
+[11/22/2022 17:55] koolexc
+In the context of PiraxRewards, what does the term Producer's token refer to?
+
+
+[11/22/2022 18:03] deathstore
+is there any analogue forge snapshot? or only scripts for forge test
+
+
+[11/22/2022 18:05] deathstore
+i just change script
+
+
+[11/22/2022 18:06] deathstore
+scripts/forgeTest.sh return many errors 
+but scripts/forgeTest.sh --gas-report runs normally
+
+
+[11/22/2022 18:06] deathstore
+how can i fix it?
+
+
+[11/22/2022 18:25] ppmoon69
+within the context of the PirexRewards contract, `ProducerToken` = the Pirex-GMX tokens which produce rewards and the associated reward state
+
+
+[11/22/2022 18:30] ppmoon69
+can you provide more details regarding the errors you're seeing with the former command?
+
+
+[11/22/2022 18:30] ppmoon69
+the snapshot command is in the scripts/forgeTest.sh file and uses pretty much the same options + values
+
+
+[11/22/2022 18:37] deathstore
+and others
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-5DF21.png
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-81EF8.png
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-70FC4.png
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/image-EB199.png
+
+
+[11/22/2022 18:42] ppmoon69
+please use an Alchemy RPC node for the sake of reliability and consistency (the one provided by default is a free one which is supposed to serve as an example). 
+
+i just ran one of the failed tests from your screenshot with the same function arguments and it passed
+
+
+[11/22/2022 19:52] koolexc
+Who are the contributors in PiraxFee who receive a fee share? trying to understand the concept.
+
+
+[11/22/2022 20:06] deathstore
+thx
+
+{Reactions}
+cheers 
+
+[11/22/2022 20:28] ppmoon69
+the Pirex project founding team and contributors
+
+{Reactions}
+thankyou 
+
+[11/22/2022 20:29] ppmoon69
+(same case as with Pirex-Convex)
+
+
+[11/22/2022 20:45] raymondfam
+@kp - no DMs, ty Please accept friend request for a crucial DM. Thanks
+
+
+[11/22/2022 20:46] ppmoon69
+Added
+
+
+[11/22/2022 20:55] ppmoon69
+please follow the official CodeArena channels for submitting findings without DM'ing, since we cannot get to everyone in an efficient and organized manner
+
+
+[11/22/2022 20:56] road220
+hi, available for dm?
+
+
+[11/23/2022 06:19] carlitox477
+It worked, thx!
+
+{Reactions}
+👍 
+
+[11/23/2022 12:00] p_crypt0
+@kp - no DMs, ty dm request or any of the other team pls
+
+
+[11/23/2022 12:41] koolexc
+just for my understanding, pxGLP and pxGMX are producer tokens?
+
+
+[11/23/2022 12:41] ppmoon69
+Would appreciate you asking any questions here for the benefit of others
+
+
+[11/23/2022 12:41] ppmoon69
+If it's a finding, please submit via the official C4 channels and we'll review it
+
+
+[11/23/2022 12:41] ppmoon69
+That's correct
+
+
+[11/23/2022 12:42] koolexc
+Thank you sir
+
+
+[11/23/2022 12:42] ppmoon69
+:btrflyheart:
+
+
+[11/23/2022 17:44] nameruse#6452
+hey, confused about the globalstate and userstate reward var. what is it supposed to be measuring exactly?
+
+
+[11/23/2022 18:12] kiki_dev
+To build off of that I want to make sure I’m also understanding this correctly. Pxgmx is a liquid wrapped version of gmx. Gmx is the dexs token where holders of gmx get rewards from fees. The rewards come in the form of various tokens such as eth avax usdc.   So in the context of the pirexRewards contract:  ProducerTokens has an array of rewardTokens. And this array holds a variety of erc20 tokens. And when a user claims their  reward they will be getting multiple types of tokens?
+
+
+[11/23/2022 18:30] ppmoon69
+Quickly reiterating/confirming what you said...
+
+pxGMX = wrapped form of GMX and esGMX tokens + all the rewards and rights associated with them (those tokens are blackholed and can never be redeemed) 
+
+The rewards are WETH or WAVAX (one or the other, depending on chain), multiplier points, and esGMX 
+
+Now, to answer your question: yes, users may get multiple types of tokens as rewards, but this is not always the case - e.g. GLP may not produce esGMX rewards, so users will only get WETH (in this specific example, the lack of esGMX rewards is not decided by us, but by GMX)
+
+{Reactions}
+thankyou 
+
+[11/23/2022 18:30] chaduke3730
+gm, where is gmxRewardRouterV2.sol?
+
+
+[11/23/2022 18:33] ppmoon69
+https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IRewardRouterV2.sol
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IRewardRouterV2.sol
+2022-11-redactedcartel/IRewardRouterV2.sol at main · code-423n4/202...
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+
+[11/23/2022 19:03] lukejohn_
+Thanks
+
+
+[11/23/2022 19:11] dinddle
+this worked for me as well! tysm
+
+OS: Windows 11; WSL2 ubuntu
+
+
+[11/23/2022 19:16] lukejohn_
+That is IgmxRewardRouterV2.sol
+
+
+[11/23/2022 19:16] lukejohn_
+Just the interface
+
+
+[11/23/2022 19:16] lukejohn_
+Where is the implementation?
+
+
+[11/23/2022 19:19] faithxia
+There's a comment on line 4 of that file: https://arbiscan.io/address/0xa906f338cb21815cbc4bc87ace9e68c87ef8d8f1#code
+
+{Embed}
+https://arbiscan.io/address/0xa906f338cb21815cbc4bc87ace9e68c87ef8d8f1
+GMX: Reward Router | Address 0xa906f338cb21815cbc4bc87ace9e68c87ef8...
+The Contract Address 0xa906f338cb21815cbc4bc87ace9e68c87ef8d8f1 page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on Arbiscan.
+
+
+[11/23/2022 19:52] ppmoon69
+Thanks faith :btrflyheart:
+
+
+[11/23/2022 19:52] ppmoon69
+GMX contracts https://gmxio.gitbook.io/gmx/contracts
+
+{Embed}
+https://gmxio.gitbook.io/gmx/contracts
+Contracts
+List of GMX contracts.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/-MhIEvWlTASUGJJfieIX-48639.png
+
+
+[11/23/2022 20:02] lukejohn_
+Thanks#
+
+
+[11/23/2022 20:23] acegawd
+Dm @never
+
+
+[11/23/2022 21:26] Franfran#5067
+Didn't got an answer from @never in two days, are you here @kp - no DMs, ty ? 🙂
+
+
+[11/23/2022 21:45] ppmoon69
+Would appreciate you asking any questions here for the benefit of others. If it's a finding, please submit via the official C4 channels and we'll review it
+
+{Reactions}
+👍 👏 
+
+[11/23/2022 22:17] acegawd
+Where's the implementation contract for https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IProducer.sol ? @kp - no DMs, ty
+
+{Embed}
+https://github.com/code-423n4/2022-11-redactedcartel/blob/main/src/interfaces/IProducer.sol
+2022-11-redactedcartel/IProducer.sol at main · code-423n4/2022-11-r...
+Contribute to code-423n4/2022-11-redactedcartel development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/ab82798c-87c6-4a0e-9fa8-cb94160965e9-45D14
+
+
+[11/24/2022 01:07] chaduke3730
+where is Producer.sol?
+
+
+[11/24/2022 01:18] chaduke3730
+saw the interface, but not the implementation
+
+
+[11/24/2022 01:53] road220
+sometimes the question context might give away the main idea where to look.
+
+{Reactions}
+👍 
+
+[11/24/2022 02:21] ppmoon69
+the producer is PirexGmx.sol
+
+{Reactions}
+👍 
+
+[11/24/2022 02:21] ppmoon69
+^
+
+
+[11/24/2022 02:21] ppmoon69
+if you can just submit the finding that'd be great
+
+
+[11/24/2022 02:22] chaduke3730
+@kp - no DMs, tyI see. got it!
+
+
+[11/24/2022 02:23] ppmoon69
+ty ser :PU_PepeBlessPray:
+
+
+[11/24/2022 05:01] JohnSmith#1623
+Can you please provide more information on what are we calculating here.
+```
+src/PirexGmx.sol
+795:             rewardAmounts[0] =
+796:                 (gmxBaseRewards * baseRewards) /
+797:                 (gmxBaseRewards + glpBaseRewards);
+798:             rewardAmounts[1] = baseRewards - rewardAmounts[0];
+```
+What does  this actually mean `(gmxBaseRewards * baseRewards) / (gmxBaseRewards + glpBaseRewards)`?
+
+
+[11/24/2022 10:33] deliriusz
+@kp - no DMs, ty , what is "Snapshot space" / delegation space in PirexGmx.sol?
+
+
+[11/24/2022 14:15] ppmoon69
+> Can you please provide more information on what are we calculating here.
+
+in the code block, we're calculating the amount of base rewards (i.e. WETH or WAVAX) produced by the GMX (`rewardAmounts[0]`) and GLP tokens (`rewardAmounts[1]`)
+
+{Reactions}
+🥺 
+
+[11/24/2022 14:17] ppmoon69
+see here for more details: https://docs.snapshot.org/spaces/what-is-a-space
+
+{Embed}
+https://docs.snapshot.org/spaces/what-is-a-space
+What is a space?
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/-Ml4DCma_fH59ge_fS_e-55436.png
+
+{Reactions}
+thankyou 
+
+[11/24/2022 14:49] Franfran#5067
+I mean it's mostly a finding, but just wanted to talk to you about the design pattern you used for it
+
+
+[11/24/2022 15:00] neumoxx
+Will the `compound` function in `AutoPxGlp` and `AutoPxGmx` be called offchain at regular intervals? I mean, how are these vaults automated?
+
+
+[11/24/2022 15:30] koolexc
+What's the strategy for the user to earn more rewards. will the user benefit if they claim rewards as early as possible or they just leave it for long time ?
+
+
+[11/24/2022 15:56] adriro
+note that there's an incentive fee to call compound so likely keepers/bots
+
+
+[11/24/2022 16:03] neumoxx
+Ah, ok, missed that. Thx!
+
+
+[11/24/2022 17:07] ppmoon69
+they can claim rewards and use them to acquire more pxGMX or pxGLP, which increases the amount of rewards earned (this is done automatically via an auto-compounding vault)
+
+{Reactions}
+👍🏻 
+
+[11/24/2022 23:42] koolexc
+can I change pxGMX to WETH or any other token? or is it just used for compounding ?
+
+
+[11/25/2022 03:41] pedroais
+Hey, want to discuss a potential issue, who can I dm ? I would like to discuss it since I'm not sure about it and don't want to send incorrect submissions.
+
+
+[11/25/2022 05:32] road220
+you can't dm. If you found something, submit it right away.
+
+
+[11/25/2022 11:15] R2#8087
+Hi everyone
+Could you please tell me what is the semantic difference between AutoPxGlp and AutoPxGmx? 
+
+Technically I see the difference in functions implementation and different set of inherited contracts
+
+But what is the planned semantic difference?
+
+
+[11/25/2022 12:09] Franfran#5067
+This would reduce the amount of low quality issues
+
+
+[11/25/2022 12:19] mahdi9606
+I think I found a Bug but I'm not sure about it , should i submit it or no ?
+
+
+[11/25/2022 12:21] illilli000
+write a POC and verify, or you risk being marked unsatisfactory, and risk getting a penalty strike
+
+{Reactions}
+👍 💯 
+
+[11/25/2022 13:51] adriro
+There's a difference in how each one compounds (you can see that in their respective compound funcs). Also pxglp tracks pxgmx rewards (seems these are not compounded into glp but kept as gmx).
+
+
+[11/25/2022 13:52] adriro
+Does anyone know if multiplier points also boost staked glp rewards? GMX docs are not that clear, I guess points only boost gmx rewards but not 100% sure.
+
+
+[11/25/2022 14:20] ppmoon69
+you can't redeem pxGMX the same way that you can with pxGLP, but you can swap it via our Curve pool, which we're planning to seed liquidity for
+
+
+[11/25/2022 14:21] ppmoon69
+if you can validate the finding prior to submission, we'd greatly appreciate it - would save everyone a lot of time and is a good practice
+
+
+[11/25/2022 14:21] ppmoon69
+you should confirm that it's a bug before submitting
+
+
+[11/25/2022 14:22] ppmoon69
+you can ask questions in this channel, which would benefit other wardens as well
+
+
+[11/25/2022 14:40] ppmoon69
+when they say "boosting", it really just means that you're earning rewards for tokens that you don't actually have. if you have 10 GMX, and 10 multiplier points, you'd be earning the equivalent of 20 GMX in rewards (2x what you'd earn if you only had the 10 GMX)
+
+
+[11/25/2022 14:43] ppmoon69
+technically, MP does "boost" staked GLP indirectly, since it earns esGMX, which earns MP
+
+
+[11/25/2022 15:19] mahdi9606
+In the PirexReward contract what is producerToken ?
+
+
+[11/25/2022 15:21] mahdi9606
+is it address of AutoPxGlp ?
+
+
+[11/25/2022 15:32] 0xbtk
+within the context of the PirexRewards contract, ProducerToken = the Pirex-GMX tokens which produce rewards and the associated reward state
+
+{Reactions}
+btrflyheart (2) 
+
+[11/25/2022 15:46] ppmoon69
+Producer tokens = pxGMX and pxGLP (tokens that produce rewards)
+
+{Reactions}
+👍 
+
+[11/25/2022 16:35] mahdi9606
+is globalState.rewards the amount of rewards in pxGmx ?
+
+
+[11/25/2022 16:50] ppmoon69
+it's the amount of rewards within the global scope for any producer token (pxGMX and pxGLP)
+
+{Reactions}
+👍 
+
+[11/25/2022 17:03] adriro
+@kp - no DMs, ty do you have an estimated value for the withdrawal penalty in the auto contracts?
+
+
+[11/25/2022 17:50] ppmoon69
+we are considering 1% as the withdrawal penalty (i.e. `withdrawalPenalty` would be `100` )
+
+{Reactions}
+👍 
+
+[11/25/2022 20:58] eyexploit
+why subtraction here to calculate rewards, I don't understand ```
+src/PirexGmx.sol
+
+        uint256 esGmxRewards = stakedGmx.depositBalances(
+            address(this),
+            address(esGmx)
+        ) - esGmxBeforeClaim; 
+``` can you please tell ?
+
+
+[11/25/2022 21:00] eyexploit
+same for baseRewards its doing this,
+
+
+[11/25/2022 22:03] ppmoon69
+the difference between the pre-claim esGMX balance and the post-claim balance = new rewards
+
+
+[11/25/2022 22:04] ppmoon69
+same with base rewards
+
+
+[11/26/2022 05:03] nameruse#6452
+>  uint256 rewards = u.rewards +
+>             u.lastBalance *
+>             (block.timestamp - u.lastUpdate);
+
+
+[11/26/2022 05:04] nameruse#6452
+Hello, why is its calculated on per second basis, is the multiplier points rewards?
+
+
+[11/26/2022 08:28] mahdi9606
+It's my question too why reward is calculated like this ?
+
+
+[11/26/2022 12:26] R2#8087
+Hi! Could you please send me a RewardRouterV2 implementation?
+
+
+[11/26/2022 13:39] ppmoon69
+GMX rewards are issued every second, but the amount is variable
+
+
+[11/26/2022 13:40] ppmoon69
+PirexRewards stores an abstract representation of those rewards so that the amount that token holders receive is based on their balances and the amount of time they've held those tokens for
+
+
+[11/26/2022 13:41] ppmoon69
+you can find every GMX contract here https://gmxio.gitbook.io/gmx/contracts
+
+{Embed}
+https://gmxio.gitbook.io/gmx/contracts
+Contracts
+List of GMX contracts.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/-MhIEvWlTASUGJJfieIX-48639.png
+
+
+[11/26/2022 13:41] ppmoon69
+RewardRouterV2 code https://arbiscan.io/address/0xA906F338CB21815cBc4Bc87ace9e68c87eF8d8F1#code
+
+{Embed}
+https://arbiscan.io/address/0xA906F338CB21815cBc4Bc87ace9e68c87eF8d8F1
+GMX: Reward Router | Address 0xA906F338CB21815cBc4Bc87ace9e68c87eF8...
+The Contract Address 0xA906F338CB21815cBc4Bc87ace9e68c87eF8d8F1 page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on Arbiscan.
+
+
+[11/26/2022 13:42] ppmoon69
+> is the multiplier points rewards?
+
+the only rewards distributed are WETH or WAVAX, and esGMX-backed pxGMX
+
+
+[11/26/2022 13:56] nameruse#6452
+thanks
+
+{Reactions}
+cheers 
+
+[11/26/2022 17:13] R2#8087
+@kp - no DMs, ty 
+Hi
+Could you please tell what is the difference between `rewardTrackerGmx` and `stakedGmx`? 
+
+And `rewardTrackerGlp`, `feeStakedGlp` and `stakedGlp`
+
+In `PirexGmx`
+
+And provide addresses for each of them in arbitrum please
+
+
+[11/26/2022 17:23] ppmoon69
+My suggestion is to look through the link I shared above
+
+
+[11/26/2022 17:28] ppmoon69
+This one: https://gmxio.gitbook.io/gmx/contracts
+
+{Embed}
+https://gmxio.gitbook.io/gmx/contracts
+Contracts
+List of GMX contracts.
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/-MhIEvWlTASUGJJfieIX-48639.png
+
+
+[11/26/2022 17:31] R2#8087
+Yes, I see `StakedGmx` and `StakedGlp` there
+But what is `rewardTrackerGmx` and `rewardTrackerGlp` and where to find them?
+
+
+[11/26/2022 17:36] R2#8087
+Found accordance in `configureGmxState`: 
+
+```
+        rewardTrackerGmx = RewardTracker(gmxRewardRouterV2.feeGmxTracker());
+        rewardTrackerGlp = RewardTracker(gmxRewardRouterV2.feeGlpTracker());
+        feeStakedGlp = RewardTracker(gmxRewardRouterV2.stakedGlpTracker());
+        stakedGmx = RewardTracker(gmxRewardRouterV2.stakedGmxTracker());
+        glpManager = gmxRewardRouterV2.glpManager();
+        gmxVault = IVault(IGlpManager(glpManager).vault());
+```
+
+But it wasn't obvious by naming
+
+
+[11/26/2022 17:39] ppmoon69
+Those are variable names. You need to look at their types
+
+
+[11/26/2022 17:40] ppmoon69
+Most of the ones you listed share the same exact contract types
+
+
+[11/26/2022 17:41] ppmoon69
+Their differences are in how they're configured or interact with one another within the GMX contract set
+
+
+[11/26/2022 17:41] R2#8087
+Yes, sure
+I just wanted to check if RewardsRouter calls `claimForAccount()` for each of them
+
+
+[11/26/2022 17:42] R2#8087
+Thank you
+
+
+[11/26/2022 17:47] ppmoon69
+:cheers:
+
+
+[11/27/2022 00:24] mahdi9606
+insufficient USDG output
+
+
+[11/27/2022 00:25] mahdi9606
+I tried call depositGlpETH function in a testcase but I get this error
+
+
+[11/27/2022 00:51] mahdi9606
+It's solved , the problem was that I used Fuzzer input as amount to deposit and sometimes it is lower that minUsdg and face this error .
+
+
+[11/27/2022 10:00] un_for_given
+@kp - no DMs, ty can you accept friend requests?
+
+
+[11/27/2022 19:39] 0xbtk
+Who can I DM ??
+
+
+[11/28/2022 07:53] .satyam_
+where should i contact for discussion about this contest?
+
+
+[11/28/2022 09:01] ppmoon69
+Post your questions here, thank you
+
+
+[11/28/2022 09:11] .satyam_
+ty, but got my answer
+
+
+[11/28/2022 10:23] un_for_given
+@kp - no DMs, ty 
+what is the reason for this check?
+```
+    if (feeAmount != 0)
+         gmxBaseReward.safeTransfer(address(pirexFees), feeAmount);
+```
+
+
+[11/28/2022 10:25] codeislight
+to not waste gas if the feeAmount is zero
+
+
+[11/28/2022 10:53] un_for_given
+is that the only reason?
+
+
+[11/28/2022 10:55] Franfran#5067
+Any reason why the compound incentive is opted out for those which are called in the `redeem()`, `withdraw()`, ... functions ?
+
+
+[11/28/2022 12:52] ppmoon69
+yes
+
+
+[11/28/2022 12:54] ppmoon69
+for the sake of simplicity in terms of accounting, and because `compound` is called as a side effect and not in an intentional way that mitigates manipulation
+
+{Reactions}
+👍 
+
+[11/28/2022 13:04] Franfran#5067
+Good protocol 🙂
+
+
+[11/28/2022 13:33] ppmoon69
+thanks ser
+
+
+[11/28/2022 13:55] saksham#7993
+It's so we'll written and seems like you guys had a previous audit too
+
+
+[11/28/2022 14:12] ppmoon69
+thanks saksha, we always aim to write code as cleanly as possible with accompanying thorough tests
+
+{Reactions}
+🫂 
+
+[11/28/2022 14:12] ppmoon69
+we had an audit by verilog
+
+
+[11/28/2022 15:12] .satyam_
+i m sending u a friend request please accept!
+
+
+[11/28/2022 15:19] ppmoon69
+would appreciate you asking any questions here for the benefit of others. if it's a finding, please submit via the official C4 channels and we'll review it
+
+
+[11/28/2022 17:04] un_for_given
+who is the judge for this contest?
+
+
+[11/28/2022 18:00] Franfran#5067
+doesn't matter mate
+
+
+[11/28/2022 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Redacted Cartel** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+
+[11/28/2022 20:32] codecustard
+So.... anybody find any errors, or am I just bad? xD
+
+{Reactions}
+psyduck (3) 
+
+[11/28/2022 21:09] ppmoon69
+thanks everyone, we appreciate you!
+
+
+[11/28/2022 21:10] ppmoon69
+excited to see the findings once our C4 judge has a go at it
+
+
+[11/28/2022 21:26] deathstore
++
+
+
+[11/28/2022 21:36] aits
+@kp - no DMs, ty
+
+
+[11/28/2022 23:21] JohnSmith#1623
+Since we are done here, can someone explain why do we have an `assert` here?
+```
+src/PirexGmx.sol
+223: postFeeAmount = assets - feeAmount;
+
+225: assert(feeAmount + postFeeAmount == assets);
+```
+What is the purpose of it?
+
+
+[11/29/2022 05:01] codeislight
+it's a sanity check, so it shall never fail
+
+
+[11/29/2022 05:04] codeislight
+in that context it looks like to be unnecessary, since even in the case which is unlikely of overflow, the tx will just revert
+
+
+[11/29/2022 10:17] ppmoon69
+It's to ensure that the exact amount of assets "distributed" (e.g. pxGMX minted for the depositor and fee distributor contract) is as it should be
+
+
+[11/29/2022 10:18] ppmoon69
+> e.g. pxGMX minted for the depositor and fee distributor contract
+
+Clarifying this specific example: we would never mint more or less pxGMX than what was actually deposited into the protocol
+
+
+[11/29/2022 10:20] ppmoon69
+We're using solidity 0.8+ so we're not concerned with int over/underflows outside of unchecked blocks
+
+{Reactions}
+✨ 
+
+[11/29/2022 11:38] pavankv
+can we  use require alternate of assert here .. ?
+
+
+[11/29/2022 12:37] Franfran#5067
+It would almost have the same behaviour, assert instead must be used for unreachable patterns and it panics
+
+{Reactions}
+👍 (2) 
+
+[11/29/2022 12:50] mahdi9606
+I couldn't find anything
+
+
+[11/30/2022 18:22] chaduke3730
+@pavankvthey just return different error code. I think assert will return a panic code, which is more serious
+
+{Reactions}
+👍 
+
+[11/30/2022 22:17] 0xbanky
+`require` and `assert` do pretty much the same thing, when they fail they both revert. They are used differently though to convey meaning - `require` is usually used to verify that the inputs to a function are valid whereas `assert` is used to verify that the function itself works as expected and all the correct invariants are held
+
+{Reactions}
+👍 (3) ✅ 
+
+[12/01/2022 22:13] Franfran#5067
+big props to me for submitting to the wrong contest.
+Not sure if it was a bug or just me, but the fact that Canto didn't had a picture maybe didn't helped. Lesson learned for the next time, don't do like me.
+
+{Reactions}
+empathy (4) 🥲 (2) 
+
+[12/01/2022 23:19] codeislight
+i hope that the team can reconsider it to be eligible, since both of them had the same deadline, so at least you didn't break that rule.
+
+
+[12/01/2022 23:19] Franfran#5067
+Tried everything, rules are the rules.
+
+{Reactions}
+🥲 
+
+[12/01/2022 23:19] Franfran#5067
+It's written in the docs
+
+
+[12/01/2022 23:20] Franfran#5067
+They cannot transfer findings
+
+
+[12/01/2022 23:20] codeislight
+damn, at least you tried that's really what matters, big up 👏
+
+{Reactions}
+👍 (2) 
+
+[12/02/2022 20:41] ppmoon69
+we'll talk to C4 about it - if it's a truly valid finding, i don't think there'd be issues awarding it (ultimately, up to C4)
+
+{Reactions}
+🚀 (3) 👏 (4) 🏆 (3) 
+
+[12/02/2022 20:56] lukejohn_
+Agree
+
+
+[12/02/2022 20:57] lukejohn_
+True finding deserves award, rules are for protection, exceptions are for special situations only such as this
+
+
+[12/02/2022 20:57] ppmoon69
+following up on this... the C4 team said they'll look into it (no promises)
+
+{Reactions}
+🔥 (2) 
+
+[12/02/2022 20:58] lukejohn_
+That is good
+
+
+[12/02/2022 20:58] lukejohn_
+Thanks
+
+
+[12/02/2022 20:58] ppmoon69
+:cheers:
+
+
+[12/02/2022 20:58] ppmoon69
+have a great weekend everyone
+
+
+[12/02/2022 21:06] Franfran#5067
+Thanks. Looks like those weren't unique so that's probably up to you based on the quality of the submission.
+
+
+[12/02/2022 21:06] Franfran#5067
+happy weekend folks 🙂
+
+{Reactions}
+🤘 (2) btrflyheart (2) 
+
+[12/13/2022 02:46] ladboy233
+👀
+
+
+[12/16/2022 14:23] yongkiws
+🦋
+
+
+[12/20/2022 10:44] ppmoon69
+We're still resolving the findings but if your finding is well-formed and valid, I'll get you taken care of
+
+Let's see what the award is for a similar funding (determined by C4) and I'll reach out
+
+{Reactions}
+chefskiss 
+
+[12/22/2022 11:18] R2#8087
+👀
+
+
+[12/27/2022 18:53] un_for_given
+who is the judge for this contest?
+
+
+[01/02/2023 15:24] xyzbtchunt
+Any update?
+
+
+[01/02/2023 20:16] ladboy233
+👀
+
+
+[01/03/2023 18:28] ladboy233
+👀:chefskiss:
+
+{Reactions}
+👀 (3) 
+
+[01/05/2023 17:24] xyzbtchunt
+Any update?
+
+
+[01/07/2023 10:55] yongkiws
+judge and c4 are busy. take care of other things maybe. please be patient😃
+
+
+[01/12/2023 05:26] un_for_given
+https://github.com/code-423n4/code423n4.com/pull/6700/files
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/6700/files
+Update Leaderboard by liveactionllama · Pull Request #6700 · code-4...
+Code4rena - ARCHIVE-Q4-2022 - redacted-cartel-nov21 [1043220341671084143].txt_Files/98446738-1A1F9
+
+{Reactions}
+👍 (2) 
+
+[01/12/2023 14:49] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **Redacted Cartel**:
+
+$18,760.33 USDC » @xiaoming90 
+$6,166.83 USDC » @bin2chen 
+$5,985.21 USDC » @unforgiven 
+$4,504.87 USDC » @HE1M 
+$4,323.80 USDC » @__141345__ 
+$4,209.73 USDC » @0x52 
+$3,824.26 USDC » @Aphak5010 
+$2,791.96 USDC » @0xladboy | Sparkware 
+$2,188.94 USDC » @rvierdiiev 
+$2,093.64 USDC » @gzeon 
+$1,704.35 USDC » @R2
+$1,602.00 USDC » @Jeiwan 
+$1,244.36 USDC » @imare 
+$1,238.16 USDC » @kyteg 
+$1,198.73 USDC » @KingNFT 
+$1,058.25 USDC » @0xSmartContract 
+$824.67 USDC » @adriro 
+$771.69 USDC » @RaymondFam 
+$771.69 USDC » @chaduke
+$732.03 USDC » @0xfuje 
+$732.03 USDC » @brgltd
+$658.15 USDC » @codeislight
+$604.66 USDC » @c3phas
+$554.94 USDC » @eierina
+$448.45 USDC » @8olidity 
+$368.69 USDC » @cccz 
+$224.74 USDC » @datapunk 
+$207.69 USDC » @hansfriese
+$206.17 USDC » @PaludoX0 
+$193.05 USDC » @0xbepresent 
+$191.85 USDC » @koxuan 
+$190.32 USDC » @pashov 
+$171.26 USDC » @cryptonue 
+$169.03 USDC » @rbserver 
+$156.93 USDC » @Koolex 
+$150.76 USDC » @joestakey 
+$141.37 USDC » @hihen 
+$131.60 USDC » @cryptoDave 
+$118.46 USDC » @JohnSmith 
+$109.07 USDC » @keccak123
+$98.18 USDC » @Englave 
+$93.14 USDC » @Rolezn 
+$93.14 USDC » @0xPanda 
+$93.14 USDC » @sakshamguruji
+$93.14 USDC » @Diana 
+$93.14 USDC » @B2 
+$93.14 USDC » @thinklab 
+$93.14 USDC » @Deivitto 
+$82.25 USDC » @immeas 
+$78.81 USDC » @carrotsmuggler 
+$74.19 USDC » @deliriusz
+$69.41 USDC » @perseverancesuccess 
+$69.41 USDC » @simon135 
+$57.56 USDC » @Ruhum
+$53.49 USDC » @Bnke 
+$53.49 USDC » @codexploder 
+$53.49 USDC » @fatherOfBlocks 
+$53.49 USDC » @yixxas 
+$53.49 USDC » @Sathish9098 
+$53.49 USDC » @martin11 
+$53.49 USDC » @csanuragjain 
+$53.49 USDC » @subtle77 
+$53.49 USDC » @0xAgro 
+$53.49 USDC » @btk 
+$53.49 USDC » @EricTee 
+$53.49 USDC » @shark 
+$53.49 USDC » @nameruse 
+$53.49 USDC » @pedr02b2 
+$53.49 USDC » @Funen
+$53.49 USDC » @cryptostellar5 
+$53.49 USDC » @ch0bu
+$53.49 USDC » @gz627 
+$53.49 USDC » @Josiah
+$53.49 USDC » @Waze 
+$53.49 USDC » @Rotcivegaf 
+$53.49 USDC » @delfin454000 
+$53.49 USDC » @danyams 
+$53.49 USDC » @0xNazgul 
+$53.49 USDC » @jadezti 
+$53.49 USDC » @Awesome 
+$41.63 USDC » poirots (@Davide Silva, @resende, @naps62)
+$41.25 USDC » @0xLad
+$39.65 USDC » @pavankv
+$39.65 USDC » Secureverse (@imkapadia, @Nsecv, @0xwhiteDevil)
+$39.65 USDC » @Schlagatron 
+$39.65 USDC » @Rahoz 
+$39.65 USDC » @ReyAdmirado 
+$39.65 USDC » @saneryee 
+$39.65 USDC » @dharma09
+$39.65 USDC » @karanctf
+$39.65 USDC » @ajtra 
+$39.65 USDC » @gkrastenov
+$39.65 USDC » @Tomio 
+$25.32 USDC » @yongskiws
+$25.32 USDC » @Roman
+$25.32 USDC » @peanuts
+$25.32 USDC » @hl_
+$25.32 USDC » @gogo 
+$25.32 USDC » @seyni 
+$15.93 USDC » @Pedroais 
+$15.93 USDC » @wagmi
+
+
+[01/12/2023 14:49] itsmetechjay
+🏁 Findings summary
+---------------------------
+High risk findings: 52 total, 6 unique
+Med risk findings: 66 total, 12 unique
+Gas findings: 33
+QA findings: 60 
+
+Awards will be distributed on Polygon within the next 1-2 weeks. **Congratulations, everyone! 💸 💸 💸**
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🎉 (4) 
+
+[01/12/2023 14:52] ladboy233
+:chefskiss:
+
+
+[01/12/2023 15:42] ppmoon69
+tyvm for participating wardens! we've vastly improved Pirex-GMX thanks to you all :btrflyheart: 
+
+(findings of note have been resolved and the changes are currently being audited)
+
+{Reactions}
+hi5 (8) chefskiss (2) 
+
+[01/13/2023 13:16] 0xfuje
+thank you, this was my first reward, i was doubting myself and feeling like i'm not yet good enough for contests but i'm really happy with the results and it got me motivated
+
+{Reactions}
+👌🏻 (3) btrflyheart 
+
+[01/15/2023 02:09] chaduke3730
+@0xfujegood job, we are next to each other, first reward is big
+
+
+[01/15/2023 12:21] 0xfuje
+thanks, yeah i see, congrats to you as well @chaduke
+
+
+==============================================================
+Exported 350 message(s)
+==============================================================
